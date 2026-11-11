@@ -39,6 +39,7 @@ def correct_grammar(text, api_key):
         return f"An error occurred: {str(error)}"
 
 
+
 demo = gr.Interface(
     fn=correct_grammar,
     inputs=[
@@ -57,14 +58,20 @@ demo = gr.Interface(
         label="Corrected text",
         lines=8
     ),
-    title="AI Text Assistant",
+    title="Text Assistant",
     description=(
-        "An AI-powered tool that corrects English grammar, "
-        "spelling, and punctuation."
+        "Welcome to Text Assistant! This application helps you "
+        "improve your English writing by automatically correcting "
+        "grammar, spelling, and punctuation errors. Simply enter your "
+        "text, provide your Groq API key, and click 'Correct grammar' "
+        "to receive an improved version of your text. "
+        "The application uses an AI-powered language model to make "
+        "your writing clearer, more accurate, and grammatically correct."
     ),
     submit_btn="Correct grammar",
     clear_btn="Clear"
 )
+
 
 if __name__ == "__main__":
     import os
